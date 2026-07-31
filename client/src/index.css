@@ -1,0 +1,261 @@
+:root {
+  --orbit-navy: #23324A;
+  --orbit-navy-light: #2E4160;
+  --orbit-accent: #2FA88A;
+  --orbit-accent-dark: #24886F;
+  --orbit-bg: #F4F6F9;
+  --orbit-card-border: #E6E9EF;
+}
+
+body {
+  background: var(--orbit-bg);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1E2733;
+}
+
+/* Buttons */
+.btn-orbit {
+  background: var(--orbit-accent);
+  border: 1px solid var(--orbit-accent);
+  color: #fff;
+  font-weight: 600;
+}
+.btn-orbit:hover, .btn-orbit:focus {
+  background: var(--orbit-accent-dark);
+  border-color: var(--orbit-accent-dark);
+  color: #fff;
+}
+
+/* Auth screens */
+.orbit-auth-screen {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--orbit-navy) 0%, var(--orbit-navy-light) 55%, var(--orbit-accent) 140%);
+}
+.orbit-auth-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+/* Brand */
+.orbit-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.orbit-brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--orbit-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+.orbit-brand-name {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--orbit-navy);
+}
+
+/* App shell */
+.orbit-shell {
+  display: flex;
+  min-height: 100vh;
+}
+.orbit-sidebar {
+  width: 240px;
+  background: var(--orbit-navy);
+  color: #EAEEF5;
+  flex-shrink: 0;
+}
+.orbit-sidebar .orbit-brand-name {
+  color: #fff;
+}
+.orbit-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  color: #C4CCDB;
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.orbit-nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+}
+.orbit-nav-link.active {
+  background: var(--orbit-accent);
+  color: #fff;
+}
+.orbit-nav-icon {
+  display: flex;
+  font-size: 1.05rem;
+}
+.orbit-sidebar-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 0.75rem;
+}
+
+.orbit-main {
+  flex-grow: 1;
+  min-width: 0;
+}
+.orbit-topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--orbit-card-border);
+}
+.orbit-page-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--orbit-navy);
+}
+.orbit-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--orbit-navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.orbit-content {
+  max-width: 1200px;
+}
+
+/* Cards */
+.orbit-card {
+  background: #fff;
+  border: 1px solid var(--orbit-card-border);
+  border-radius: 12px;
+}
+.orbit-stat-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: var(--orbit-navy);
+}
+
+/* Progress bars */
+.orbit-progress {
+  height: 8px;
+  background: #EEF1F6;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.orbit-progress-bar {
+  height: 100%;
+  background: var(--orbit-accent);
+  border-radius: 6px;
+}
+
+/* Table */
+.orbit-table thead th {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #7C8798;
+  border-bottom: 1px solid var(--orbit-card-border);
+  padding: 0.9rem 1rem;
+}
+.orbit-table td {
+  padding: 0.85rem 1rem;
+  border-bottom: 1px solid #F0F2F6;
+  font-size: 0.9rem;
+}
+
+/* Search box */
+.orbit-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--orbit-card-border);
+  border-radius: 8px;
+  padding: 0.35rem 0.75rem;
+  color: #7C8798;
+}
+.orbit-search input {
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  min-width: 220px;
+}
+
+/* Modal */
+.orbit-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1050;
+  padding: 1rem;
+}
+.orbit-modal {
+  background: #fff;
+  border-radius: 14px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3);
+}
+
+/* Kanban */
+.orbit-kanban {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 260px;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 1rem;
+}
+.orbit-kanban-col {
+  background: #EEF1F6;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+}
+.orbit-kanban-col-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.9rem 1rem 0.5rem;
+  color: var(--orbit-navy);
+}
+.orbit-kanban-col-body {
+  padding: 0 0.6rem 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  flex-grow: 1;
+}
+.orbit-deal-card {
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid var(--orbit-card-border);
+  padding: 0.75rem;
+  cursor: grab;
+}
