@@ -21,6 +21,12 @@ api.interceptors.response.use(
       window.location.href = '/login';
     }
     return Promise.reject(err);
+
+
+    if (err.response && err.response.status === 403) {
+      window.location.href = '/forbidden';
+    }
+    return Promise.reject(err);
   }
 );
 
