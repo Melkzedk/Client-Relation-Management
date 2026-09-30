@@ -29,6 +29,5 @@ api.interceptors.response.use(
     return Promise.reject(err);
   }
 );
-TextTrackList
 
 export default api;
